@@ -1,5 +1,5 @@
 //
-//  BCViewController.h
+//  BCStyleViewController.h
 //  BadCertificates
 //
 //  Created by Cody Kolodziejzyk on 2/9/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BCViewController : UIViewController
+@interface BCStyleViewController : UICollectionViewController
 
 @end

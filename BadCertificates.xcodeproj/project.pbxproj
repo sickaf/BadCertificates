@@ -14,13 +14,15 @@
 		CDD0E65B18A8304C00064B18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD0E65A18A8304C00064B18 /* main.m */; };
 		CDD0E65F18A8304C00064B18 /* BCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD0E65E18A8304C00064B18 /* BCAppDelegate.m */; };
 		CDD0E66218A8304C00064B18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD0E66018A8304C00064B18 /* Main.storyboard */; };
-		CDD0E66518A8304C00064B18 /* BCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD0E66418A8304C00064B18 /* BCViewController.m */; };
 		CDD0E66718A8304C00064B18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDD0E66618A8304C00064B18 /* Images.xcassets */; };
 		CDD0E66E18A8304C00064B18 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD0E66D18A8304C00064B18 /* XCTest.framework */; };
 		CDD0E66F18A8304C00064B18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD0E64E18A8304C00064B18 /* Foundation.framework */; };
 		CDD0E67018A8304C00064B18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD0E65218A8304C00064B18 /* UIKit.framework */; };
 		CDD0E67818A8304C00064B18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CDD0E67618A8304C00064B18 /* InfoPlist.strings */; };
 		CDD0E67A18A8304C00064B18 /* BadCertificatesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD0E67918A8304C00064B18 /* BadCertificatesTests.m */; };
+		CDD0E68618A830E600064B18 /* BCCertificate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD0E68518A830E600064B18 /* BCCertificate.m */; };
+		CDD0E68C18A8389900064B18 /* BCStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD0E68B18A8389900064B18 /* BCStyleViewController.m */; };
+		CDD0E69018A83A5400064B18 /* BCStyleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD0E68F18A83A5400064B18 /* BCStyleCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +47,18 @@
 		CDD0E65D18A8304C00064B18 /* BCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCAppDelegate.h; sourceTree = "<group>"; };
 		CDD0E65E18A8304C00064B18 /* BCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCAppDelegate.m; sourceTree = "<group>"; };
 		CDD0E66118A8304C00064B18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CDD0E66318A8304C00064B18 /* BCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCViewController.h; sourceTree = "<group>"; };
-		CDD0E66418A8304C00064B18 /* BCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCViewController.m; sourceTree = "<group>"; };
 		CDD0E66618A8304C00064B18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CDD0E66C18A8304C00064B18 /* BadCertificatesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BadCertificatesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD0E66D18A8304C00064B18 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CDD0E67518A8304C00064B18 /* BadCertificatesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BadCertificatesTests-Info.plist"; sourceTree = "<group>"; };
 		CDD0E67718A8304C00064B18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CDD0E67918A8304C00064B18 /* BadCertificatesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BadCertificatesTests.m; sourceTree = "<group>"; };
+		CDD0E68418A830E600064B18 /* BCCertificate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCCertificate.h; sourceTree = "<group>"; };
+		CDD0E68518A830E600064B18 /* BCCertificate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCCertificate.m; sourceTree = "<group>"; };
+		CDD0E68A18A8389900064B18 /* BCStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCStyleViewController.h; sourceTree = "<group>"; };
+		CDD0E68B18A8389900064B18 /* BCStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCStyleViewController.m; sourceTree = "<group>"; };
+		CDD0E68E18A83A5400064B18 /* BCStyleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCStyleCell.h; sourceTree = "<group>"; };
+		CDD0E68F18A83A5400064B18 /* BCStyleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCStyleCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +118,12 @@
 		CDD0E65418A8304C00064B18 /* BadCertificates */ = {
 			isa = PBXGroup;
 			children = (
+				CDD0E68D18A83A3600064B18 /* Views */,
+				CDD0E68918A8386B00064B18 /* View Controllers */,
+				CDD0E68318A830D100064B18 /* Objects */,
 				CDD0E65D18A8304C00064B18 /* BCAppDelegate.h */,
 				CDD0E65E18A8304C00064B18 /* BCAppDelegate.m */,
 				CDD0E66018A8304C00064B18 /* Main.storyboard */,
-				CDD0E66318A8304C00064B18 /* BCViewController.h */,
-				CDD0E66418A8304C00064B18 /* BCViewController.m */,
 				CDD0E66618A8304C00064B18 /* Images.xcassets */,
 				CDD0E65518A8304C00064B18 /* Supporting Files */,
 			);
@@ -150,6 +157,33 @@
 				CDD0E67618A8304C00064B18 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CDD0E68318A830D100064B18 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				CDD0E68418A830E600064B18 /* BCCertificate.h */,
+				CDD0E68518A830E600064B18 /* BCCertificate.m */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		CDD0E68918A8386B00064B18 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CDD0E68A18A8389900064B18 /* BCStyleViewController.h */,
+				CDD0E68B18A8389900064B18 /* BCStyleViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CDD0E68D18A83A3600064B18 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CDD0E68E18A83A5400064B18 /* BCStyleCell.h */,
+				CDD0E68F18A83A5400064B18 /* BCStyleCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDD0E66518A8304C00064B18 /* BCViewController.m in Sources */,
 				CDD0E65B18A8304C00064B18 /* main.m in Sources */,
+				CDD0E68618A830E600064B18 /* BCCertificate.m in Sources */,
 				CDD0E65F18A8304C00064B18 /* BCAppDelegate.m in Sources */,
+				CDD0E68C18A8389900064B18 /* BCStyleViewController.m in Sources */,
+				CDD0E69018A83A5400064B18 /* BCStyleCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
