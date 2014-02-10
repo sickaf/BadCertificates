@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CD2EBB9D18A8433A00F6CB27 /* styles.json in Resources */ = {isa = PBXBuildFile; fileRef = CD2EBB9C18A8433A00F6CB27 /* styles.json */; };
 		CD2EBBA018A8486400F6CB27 /* BCStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2EBB9F18A8486400F6CB27 /* BCStyle.m */; };
+		CD2EBBA918A851A400F6CB27 /* BCCertificateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2EBBA818A851A400F6CB27 /* BCCertificateViewController.m */; };
+		CD2EBBAD18A85E5000F6CB27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD2EBBAC18A85E5000F6CB27 /* Images.xcassets */; };
 		CDD0E64F18A8304C00064B18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD0E64E18A8304C00064B18 /* Foundation.framework */; };
 		CDD0E65118A8304C00064B18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD0E65018A8304C00064B18 /* CoreGraphics.framework */; };
 		CDD0E65318A8304C00064B18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD0E65218A8304C00064B18 /* UIKit.framework */; };
@@ -16,7 +18,6 @@
 		CDD0E65B18A8304C00064B18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD0E65A18A8304C00064B18 /* main.m */; };
 		CDD0E65F18A8304C00064B18 /* BCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD0E65E18A8304C00064B18 /* BCAppDelegate.m */; };
 		CDD0E66218A8304C00064B18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDD0E66018A8304C00064B18 /* Main.storyboard */; };
-		CDD0E66718A8304C00064B18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDD0E66618A8304C00064B18 /* Images.xcassets */; };
 		CDD0E66E18A8304C00064B18 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD0E66D18A8304C00064B18 /* XCTest.framework */; };
 		CDD0E66F18A8304C00064B18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD0E64E18A8304C00064B18 /* Foundation.framework */; };
 		CDD0E67018A8304C00064B18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD0E65218A8304C00064B18 /* UIKit.framework */; };
@@ -41,6 +42,9 @@
 		CD2EBB9C18A8433A00F6CB27 /* styles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = styles.json; sourceTree = "<group>"; };
 		CD2EBB9E18A8486400F6CB27 /* BCStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCStyle.h; sourceTree = "<group>"; };
 		CD2EBB9F18A8486400F6CB27 /* BCStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCStyle.m; sourceTree = "<group>"; };
+		CD2EBBA718A851A400F6CB27 /* BCCertificateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCCertificateViewController.h; sourceTree = "<group>"; };
+		CD2EBBA818A851A400F6CB27 /* BCCertificateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCCertificateViewController.m; sourceTree = "<group>"; };
+		CD2EBBAC18A85E5000F6CB27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CDD0E64B18A8304C00064B18 /* BadCertificates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadCertificates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD0E64E18A8304C00064B18 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CDD0E65018A8304C00064B18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -52,7 +56,6 @@
 		CDD0E65D18A8304C00064B18 /* BCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCAppDelegate.h; sourceTree = "<group>"; };
 		CDD0E65E18A8304C00064B18 /* BCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCAppDelegate.m; sourceTree = "<group>"; };
 		CDD0E66118A8304C00064B18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CDD0E66618A8304C00064B18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CDD0E66C18A8304C00064B18 /* BadCertificatesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BadCertificatesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD0E66D18A8304C00064B18 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CDD0E67518A8304C00064B18 /* BadCertificatesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BadCertificatesTests-Info.plist"; sourceTree = "<group>"; };
@@ -129,8 +132,8 @@
 				CDD0E65D18A8304C00064B18 /* BCAppDelegate.h */,
 				CDD0E65E18A8304C00064B18 /* BCAppDelegate.m */,
 				CDD0E66018A8304C00064B18 /* Main.storyboard */,
-				CDD0E66618A8304C00064B18 /* Images.xcassets */,
 				CDD0E65518A8304C00064B18 /* Supporting Files */,
+				CD2EBBAC18A85E5000F6CB27 /* Images.xcassets */,
 			);
 			path = BadCertificates;
 			sourceTree = "<group>";
@@ -181,6 +184,8 @@
 			children = (
 				CDD0E68A18A8389900064B18 /* BCStyleViewController.h */,
 				CDD0E68B18A8389900064B18 /* BCStyleViewController.m */,
+				CD2EBBA718A851A400F6CB27 /* BCCertificateViewController.h */,
+				CD2EBBA818A851A400F6CB27 /* BCCertificateViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -271,8 +276,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDD0E66718A8304C00064B18 /* Images.xcassets in Resources */,
 				CDD0E65918A8304C00064B18 /* InfoPlist.strings in Resources */,
+				CD2EBBAD18A85E5000F6CB27 /* Images.xcassets in Resources */,
 				CDD0E66218A8304C00064B18 /* Main.storyboard in Resources */,
 				CD2EBB9D18A8433A00F6CB27 /* styles.json in Resources */,
 			);
@@ -298,6 +303,7 @@
 				CD2EBBA018A8486400F6CB27 /* BCStyle.m in Sources */,
 				CDD0E65F18A8304C00064B18 /* BCAppDelegate.m in Sources */,
 				CDD0E68C18A8389900064B18 /* BCStyleViewController.m in Sources */,
+				CD2EBBA918A851A400F6CB27 /* BCCertificateViewController.m in Sources */,
 				CDD0E69018A83A5400064B18 /* BCStyleCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

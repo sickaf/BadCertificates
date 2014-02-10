@@ -26,7 +26,7 @@
 
 - (void)configureWithStyle:(BCStyle *)style
 {
-    self.mainLabel.text = [NSString stringWithFormat:@"Style %li",[style.styleNumber integerValue]];
+    self.mainLabel.text = [NSString stringWithFormat:@"Style %li",(long)[style.styleNumber integerValue]];
     self.mainLabel.font = [UIFont fontWithName:style.awardFontName size:[self.mainLabel.font pointSize]];
     self.bgImageView.image = [UIImage imageNamed:style.thumbnailImageName];
 }

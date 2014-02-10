@@ -7,6 +7,7 @@
 //
 
 #import "BCStyleViewController.h"
+#import "BCCertificateViewController.h"
 #import "BCStyleCell.h"
 #import "BCStyle.h"
 
@@ -75,6 +76,12 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    
+    BCStyle *style = [self.styles objectAtIndex:indexPath.row];
+
+    BCCertificateViewController *cvc = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"certificate"];
+    cvc.style = style;
+    [self.navigationController pushViewController:cvc animated:YES];
 }
 
 #pragma mark - Getters
