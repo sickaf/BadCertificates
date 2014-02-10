@@ -20,6 +20,8 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(editPressed:)];
+    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     [self.view addGestureRecognizer:tap];
     
@@ -79,6 +81,11 @@
 {
     _shouldStatusBarHide = !_shouldStatusBarHide;
     [self.navigationController setNavigationBarHidden:!self.navigationController.navigationBarHidden animated:NO];
+}
+
+- (void)editPressed:(id)sender
+{
+    
 }
 
 @end
