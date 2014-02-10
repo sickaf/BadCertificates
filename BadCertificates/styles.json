@@ -1,0 +1,10 @@
+{
+    "styles": [
+               {
+               "style_number": 1,
+               "background_image": "background_one",
+               "award_font": "Baskerville-BoldItalic",
+               "detail_font": "HelveticaNeue-Medium"
+               }
+               ]
+}

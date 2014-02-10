@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BCStyle.h"
 
 @interface BCStyleCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *mainLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
 
+- (void)configureWithStyle:(BCStyle *)style;
 
 @end

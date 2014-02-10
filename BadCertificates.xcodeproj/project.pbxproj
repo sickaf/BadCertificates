@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD2EBB9D18A8433A00F6CB27 /* styles.json in Resources */ = {isa = PBXBuildFile; fileRef = CD2EBB9C18A8433A00F6CB27 /* styles.json */; };
+		CD2EBBA018A8486400F6CB27 /* BCStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2EBB9F18A8486400F6CB27 /* BCStyle.m */; };
 		CDD0E64F18A8304C00064B18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD0E64E18A8304C00064B18 /* Foundation.framework */; };
 		CDD0E65118A8304C00064B18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD0E65018A8304C00064B18 /* CoreGraphics.framework */; };
 		CDD0E65318A8304C00064B18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD0E65218A8304C00064B18 /* UIKit.framework */; };
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD2EBB9C18A8433A00F6CB27 /* styles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = styles.json; sourceTree = "<group>"; };
+		CD2EBB9E18A8486400F6CB27 /* BCStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCStyle.h; sourceTree = "<group>"; };
+		CD2EBB9F18A8486400F6CB27 /* BCStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCStyle.m; sourceTree = "<group>"; };
 		CDD0E64B18A8304C00064B18 /* BadCertificates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadCertificates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD0E64E18A8304C00064B18 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CDD0E65018A8304C00064B18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -137,6 +142,7 @@
 				CDD0E65718A8304C00064B18 /* InfoPlist.strings */,
 				CDD0E65A18A8304C00064B18 /* main.m */,
 				CDD0E65C18A8304C00064B18 /* BadCertificates-Prefix.pch */,
+				CD2EBB9C18A8433A00F6CB27 /* styles.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -164,6 +170,8 @@
 			children = (
 				CDD0E68418A830E600064B18 /* BCCertificate.h */,
 				CDD0E68518A830E600064B18 /* BCCertificate.m */,
+				CD2EBB9E18A8486400F6CB27 /* BCStyle.h */,
+				CD2EBB9F18A8486400F6CB27 /* BCStyle.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -266,6 +274,7 @@
 				CDD0E66718A8304C00064B18 /* Images.xcassets in Resources */,
 				CDD0E65918A8304C00064B18 /* InfoPlist.strings in Resources */,
 				CDD0E66218A8304C00064B18 /* Main.storyboard in Resources */,
+				CD2EBB9D18A8433A00F6CB27 /* styles.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +295,7 @@
 			files = (
 				CDD0E65B18A8304C00064B18 /* main.m in Sources */,
 				CDD0E68618A830E600064B18 /* BCCertificate.m in Sources */,
+				CD2EBBA018A8486400F6CB27 /* BCStyle.m in Sources */,
 				CDD0E65F18A8304C00064B18 /* BCAppDelegate.m in Sources */,
 				CDD0E68C18A8389900064B18 /* BCStyleViewController.m in Sources */,
 				CDD0E69018A83A5400064B18 /* BCStyleCell.m in Sources */,
@@ -497,6 +507,7 @@
 				CDD0E67F18A8304C00064B18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDD0E68018A8304C00064B18 /* Build configuration list for PBXNativeTarget "BadCertificatesTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +516,7 @@
 				CDD0E68218A8304C00064B18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
