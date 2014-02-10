@@ -8,7 +8,9 @@
 
 #import "BCCertificateViewController.h"
 
-@interface BCCertificateViewController ()
+@interface BCCertificateViewController () {
+    BOOL _shouldStatusBarHide;
+}
 
 @end
 
@@ -29,13 +31,24 @@
     [super viewWillAppear:animated];
     
     [self.navigationController setNavigationBarHidden:YES animated:animated];
+    
+    _shouldStatusBarHide = YES;
+    [UIView animateWithDuration:0.2 animations:^{
+        [self setNeedsStatusBarAppearanceUpdate];
+    }];
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return _shouldStatusBarHide;
 }
 
 #pragma mark - Actions
 
 - (void)handleTap:(UITapGestureRecognizer *)tap
 {
-    [self.navigationController setNavigationBarHidden:!self.navigationController.navigationBarHidden animated:YES];
+    _shouldStatusBarHide = !_shouldStatusBarHide;
+    [self.navigationController setNavigationBarHidden:!self.navigationController.navigationBarHidden animated:NO];
 }
 
 @end
