@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Data</key>
+	<array>
+		<string>humility</string>
+		<string>regret</string>
+		<string>honor</string>
+		<string>sadness</string>
+		<string>happiness</string>
+		<string>remorse</string>
+		<string>pleasure</string>
+		<string>exuberance</string>
+		<string>misery</string>
+		<string>pleasure</string>
+		<string>delirium</string>
+	</array>
+</dict>
+</plist>

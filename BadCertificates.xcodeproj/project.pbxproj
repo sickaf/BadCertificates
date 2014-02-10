@@ -11,6 +11,8 @@
 		CD2EBBA018A8486400F6CB27 /* BCStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2EBB9F18A8486400F6CB27 /* BCStyle.m */; };
 		CD2EBBA918A851A400F6CB27 /* BCCertificateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2EBBA818A851A400F6CB27 /* BCCertificateViewController.m */; };
 		CD2EBBAD18A85E5000F6CB27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD2EBBAC18A85E5000F6CB27 /* Images.xcassets */; };
+		CD2EBBAF18A86B4B00F6CB27 /* feelings.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD2EBBAE18A86B4B00F6CB27 /* feelings.plist */; };
+		CD2EBBB118A8763500F6CB27 /* awards.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD2EBBB018A8763500F6CB27 /* awards.plist */; };
 		CDD0E64F18A8304C00064B18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD0E64E18A8304C00064B18 /* Foundation.framework */; };
 		CDD0E65118A8304C00064B18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD0E65018A8304C00064B18 /* CoreGraphics.framework */; };
 		CDD0E65318A8304C00064B18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD0E65218A8304C00064B18 /* UIKit.framework */; };
@@ -45,6 +47,8 @@
 		CD2EBBA718A851A400F6CB27 /* BCCertificateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCCertificateViewController.h; sourceTree = "<group>"; };
 		CD2EBBA818A851A400F6CB27 /* BCCertificateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCCertificateViewController.m; sourceTree = "<group>"; };
 		CD2EBBAC18A85E5000F6CB27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CD2EBBAE18A86B4B00F6CB27 /* feelings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = feelings.plist; sourceTree = "<group>"; };
+		CD2EBBB018A8763500F6CB27 /* awards.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = awards.plist; sourceTree = "<group>"; };
 		CDD0E64B18A8304C00064B18 /* BadCertificates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadCertificates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD0E64E18A8304C00064B18 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CDD0E65018A8304C00064B18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -146,6 +150,8 @@
 				CDD0E65A18A8304C00064B18 /* main.m */,
 				CDD0E65C18A8304C00064B18 /* BadCertificates-Prefix.pch */,
 				CD2EBB9C18A8433A00F6CB27 /* styles.json */,
+				CD2EBBAE18A86B4B00F6CB27 /* feelings.plist */,
+				CD2EBBB018A8763500F6CB27 /* awards.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -280,6 +286,8 @@
 				CD2EBBAD18A85E5000F6CB27 /* Images.xcassets in Resources */,
 				CDD0E66218A8304C00064B18 /* Main.storyboard in Resources */,
 				CD2EBB9D18A8433A00F6CB27 /* styles.json in Resources */,
+				CD2EBBB118A8763500F6CB27 /* awards.plist in Resources */,
+				CD2EBBAF18A86B4B00F6CB27 /* feelings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

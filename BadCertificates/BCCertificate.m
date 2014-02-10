@@ -10,26 +10,33 @@
 
 @implementation BCCertificate
 
-
-+ (instancetype)certificateWithDictionary:(NSDictionary *)dictionary
++ (instancetype)randomCertificate
 {
-    return [[BCCertificate alloc] initWithDictionary:dictionary];
+    return [[BCCertificate alloc] initWithRandomValues];
 }
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+- (instancetype)initWithRandomValues
 {
     self = [super init];
     if (self) {
-        self.headerText = dictionary[@"header_text"];
-        self.award = dictionary[@"award"];
-        self.awardee = dictionary[@"awardee"];
-        self.modeText = dictionary[@"mode_text"];
-        self.awarderText = dictionary[@"awarder_text"];
+        self.feeling = [self getRandomValueFromPlistWithName:@"feelings"];
+        self.award = [self getRandomValueFromPlistWithName:@"awards"];
         self.date = [NSDate date];
-        
-        self.backgroundImageName = dictionary[@"background_image"];
     }
     return self;
+}
+
+- (NSString *)getRandomValueFromPlistWithName:(NSString *)name
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@"plist"];
+    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
+    NSString *chosen;
+    if (dict) {
+        NSArray *data = dict[@"Data"];
+        int rand = arc4random_uniform(data.count);
+        chosen = data[rand];
+    }
+    return chosen;
 }
 
 @end

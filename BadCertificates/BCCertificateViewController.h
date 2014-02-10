@@ -8,11 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import "BCStyle.h"
+#import "BCCertificate.h"
 
 @interface BCCertificateViewController : UIViewController
 
 @property (nonatomic, strong) BCStyle *style;
+@property (nonatomic, strong) BCCertificate *certificate;
 
 @property (weak, nonatomic) IBOutlet UIImageView *certificateBackground;
+
+@property (weak, nonatomic) IBOutlet UILabel *headerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *awarderLabel;
+@property (weak, nonatomic) IBOutlet UILabel *functionalityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *hereOnThisLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *awardLabel;
+@property (weak, nonatomic) IBOutlet UILabel *recipientLabel;
 
 @end

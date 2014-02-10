@@ -20,10 +20,14 @@
 {
     [super viewDidLoad];
     
-    self.certificateBackground.image = [UIImage imageNamed:self.style.backgroundImageName];
-    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
-    [self.certificateBackground addGestureRecognizer:tap];
+    [self.view addGestureRecognizer:tap];
+    
+    // setup the style of the certificate
+    [self setupCertificateAppearance];
+    
+    // setup the proper values for the randomly selected certificate
+    [self setupCertificateValues];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -41,6 +45,32 @@
 - (BOOL)prefersStatusBarHidden
 {
     return _shouldStatusBarHide;
+}
+
+#pragma mark - Helpers
+
+- (void)setupCertificateAppearance
+{
+    // certificate background
+    self.certificateBackground.image = [UIImage imageNamed:self.style.backgroundImageName];
+    
+    // main Labels
+    self.awardLabel.font = [UIFont fontWithName:self.style.awardFontName size:[self.awardLabel.font pointSize]];
+    self.recipientLabel.font = [UIFont fontWithName:self.style.awardFontName size:[self.recipientLabel.font pointSize]];
+    
+    // detail labels
+    self.headerLabel.font = [UIFont fontWithName:self.style.detailFontName size:[self.headerLabel.font pointSize]];
+    self.dateLabel.font = [UIFont fontWithName:self.style.detailFontName size:[self.dateLabel.font pointSize]];
+    self.awarderLabel.font = [UIFont fontWithName:self.style.detailFontName size:[self.awarderLabel.font pointSize]];
+    self.functionalityLabel.font = [UIFont fontWithName:self.style.detailFontName size:[self.functionalityLabel.font pointSize]];
+    self.hereOnThisLabel.font = [UIFont fontWithName:self.style.detailFontName size:[self.hereOnThisLabel.font pointSize]];
+    
+}
+
+- (void)setupCertificateValues
+{
+    self.headerLabel.text = [NSString stringWithFormat:@"With great %@, we present the title of", self.certificate.feeling];
+    self.awardLabel.text = self.certificate.award;
 }
 
 #pragma mark - Actions

@@ -10,6 +10,7 @@
 #import "BCCertificateViewController.h"
 #import "BCStyleCell.h"
 #import "BCStyle.h"
+#import "BCCertificate.h"
 
 @interface BCStyleViewController ()
 
@@ -77,10 +78,15 @@
 {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
     
+    // get the proper style
     BCStyle *style = [self.styles objectAtIndex:indexPath.row];
-
+    
+    // generate a ranomd certificate
+    BCCertificate *cert = [BCCertificate randomCertificate];
+    
     BCCertificateViewController *cvc = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"certificate"];
     cvc.style = style;
+    cvc.certificate = cert;
     [self.navigationController pushViewController:cvc animated:YES];
 }
 
