@@ -15,6 +15,14 @@
 		<string>misery</string>
 		<string>pleasure</string>
 		<string>delirium</string>
+		<string>joy</string>
+		<string>horror</string>
+		<string>servitude</string>
+		<string>fortitude</string>
+		<string>hesitation</string>
+		<string>vigor</string>
+		<string>confusion</string>
+		<string>terror</string>
 	</array>
 </dict>
 </plist>
