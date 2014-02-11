@@ -73,6 +73,8 @@
 {
     self.headerLabel.text = [NSString stringWithFormat:@"With great %@, we present the title of", self.certificate.feeling];
     self.awardLabel.text = self.certificate.award;
+    self.awarderLabel.text = self.certificate.awarder;
+    self.recipientLabel.text = self.certificate.awardee;
 }
 
 #pragma mark - Actions
