@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Data</key>
+	<array>
+		<string>Smallest</string>
+		<string>Wettest</string>
+		<string>Tightest</string>
+		<string>Hairiest</string>
+		<string>Biggest</string>
+		<string>Worst</string>
+		<string>Best</string>
+		<string>Most Deformed</string>
+		<string>Shittiest</string>
+		<string>Most Terrible</string>
+		<string>Most Average</string>
+		<string>Most Subpar</string>
+		<string>Most Fucked Up</string>
+		<string>Thickest</string>
+		<string>Widest</string>
+		<string>Smelliest</string>
+		<string>Dirtiest</string>
+		<string>Sickest</string>
+		<string>Most Ratchet</string>
+		<string>Best Smelling</string>
+		<string>Worst Smelling</string>
+	</array>
+</dict>
+</plist>

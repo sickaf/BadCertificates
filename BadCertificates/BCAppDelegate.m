@@ -7,12 +7,15 @@
 //
 
 #import "BCAppDelegate.h"
+#import "BCDatabaseManager.h"
 
 @implementation BCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+    [BCDatabaseManager sharedInstance];
+    
     return YES;
 }
 							

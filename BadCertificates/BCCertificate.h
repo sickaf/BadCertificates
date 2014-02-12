@@ -10,11 +10,13 @@
 
 @interface BCCertificate : NSObject
 
-@property (nonatomic, strong) NSString *feeling;
-@property (nonatomic, strong) NSString *award;
 @property (nonatomic, strong) NSString *awardee;
 @property (nonatomic, strong) NSString *awarder;
 @property (nonatomic, strong) NSDate *date;
+
+@property (nonatomic, strong) NSString *feeling;
+@property (nonatomic, strong) NSString *adjective;
+@property (nonatomic, strong) NSString *noun;
 
 + (instancetype)randomCertificate;
 

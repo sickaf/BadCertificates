@@ -12,7 +12,12 @@
 		CD2EBBA918A851A400F6CB27 /* BCCertificateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD2EBBA818A851A400F6CB27 /* BCCertificateViewController.m */; };
 		CD2EBBAD18A85E5000F6CB27 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD2EBBAC18A85E5000F6CB27 /* Images.xcassets */; };
 		CD2EBBAF18A86B4B00F6CB27 /* feelings.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD2EBBAE18A86B4B00F6CB27 /* feelings.plist */; };
-		CD2EBBB118A8763500F6CB27 /* awards.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD2EBBB018A8763500F6CB27 /* awards.plist */; };
+		CD46A26618AB3441001AB7B0 /* Adjective.m in Sources */ = {isa = PBXBuildFile; fileRef = CD46A26118AB3441001AB7B0 /* Adjective.m */; };
+		CD46A26718AB3441001AB7B0 /* Emotion.m in Sources */ = {isa = PBXBuildFile; fileRef = CD46A26318AB3441001AB7B0 /* Emotion.m */; };
+		CD46A26818AB3441001AB7B0 /* Noun.m in Sources */ = {isa = PBXBuildFile; fileRef = CD46A26518AB3441001AB7B0 /* Noun.m */; };
+		CD5BDB5B18AAE5C40012F6BA /* BCDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5BDB5A18AAE5C40012F6BA /* BCDatabaseManager.m */; };
+		CD5BDB6718AB20100012F6BA /* adjectives.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD5BDB6618AB20100012F6BA /* adjectives.plist */; };
+		CD5BDB7218AB319E0012F6BA /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD5BDB7018AB319E0012F6BA /* Model.xcdatamodeld */; };
 		CD701A1318A9E3B000356353 /* BCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD701A1218A9E3B000356353 /* BCHomeViewController.m */; };
 		CDD0E64F18A8304C00064B18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD0E64E18A8304C00064B18 /* Foundation.framework */; };
 		CDD0E65118A8304C00064B18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD0E65018A8304C00064B18 /* CoreGraphics.framework */; };
@@ -29,6 +34,7 @@
 		CDD0E68618A830E600064B18 /* BCCertificate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD0E68518A830E600064B18 /* BCCertificate.m */; };
 		CDD0E68C18A8389900064B18 /* BCStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD0E68B18A8389900064B18 /* BCStyleViewController.m */; };
 		CDD0E69018A83A5400064B18 /* BCStyleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD0E68F18A83A5400064B18 /* BCStyleCell.m */; };
+		CDD8AA8618AC17FA00E0B9C2 /* nouns.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDD8AA8518AC17FA00E0B9C2 /* nouns.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +55,16 @@
 		CD2EBBA818A851A400F6CB27 /* BCCertificateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCCertificateViewController.m; sourceTree = "<group>"; };
 		CD2EBBAC18A85E5000F6CB27 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CD2EBBAE18A86B4B00F6CB27 /* feelings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = feelings.plist; sourceTree = "<group>"; };
-		CD2EBBB018A8763500F6CB27 /* awards.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = awards.plist; sourceTree = "<group>"; };
+		CD46A26018AB3441001AB7B0 /* Adjective.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Adjective.h; sourceTree = "<group>"; };
+		CD46A26118AB3441001AB7B0 /* Adjective.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Adjective.m; sourceTree = "<group>"; };
+		CD46A26218AB3441001AB7B0 /* Emotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Emotion.h; sourceTree = "<group>"; };
+		CD46A26318AB3441001AB7B0 /* Emotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Emotion.m; sourceTree = "<group>"; };
+		CD46A26418AB3441001AB7B0 /* Noun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Noun.h; sourceTree = "<group>"; };
+		CD46A26518AB3441001AB7B0 /* Noun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Noun.m; sourceTree = "<group>"; };
+		CD5BDB5918AAE5C40012F6BA /* BCDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCDatabaseManager.h; sourceTree = "<group>"; };
+		CD5BDB5A18AAE5C40012F6BA /* BCDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCDatabaseManager.m; sourceTree = "<group>"; };
+		CD5BDB6618AB20100012F6BA /* adjectives.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = adjectives.plist; sourceTree = "<group>"; };
+		CD5BDB7118AB319E0012F6BA /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		CD701A1118A9E3B000356353 /* BCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCHomeViewController.h; sourceTree = "<group>"; };
 		CD701A1218A9E3B000356353 /* BCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCHomeViewController.m; sourceTree = "<group>"; };
 		CDD0E64B18A8304C00064B18 /* BadCertificates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadCertificates.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +89,7 @@
 		CDD0E68B18A8389900064B18 /* BCStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCStyleViewController.m; sourceTree = "<group>"; };
 		CDD0E68E18A83A5400064B18 /* BCStyleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCStyleCell.h; sourceTree = "<group>"; };
 		CDD0E68F18A83A5400064B18 /* BCStyleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCStyleCell.m; sourceTree = "<group>"; };
+		CDD8AA8518AC17FA00E0B9C2 /* nouns.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = nouns.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +116,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD46A26918AB3446001AB7B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD5BDB7018AB319E0012F6BA /* Model.xcdatamodeld */,
+				CD46A26018AB3441001AB7B0 /* Adjective.h */,
+				CD46A26118AB3441001AB7B0 /* Adjective.m */,
+				CD46A26218AB3441001AB7B0 /* Emotion.h */,
+				CD46A26318AB3441001AB7B0 /* Emotion.m */,
+				CD46A26418AB3441001AB7B0 /* Noun.h */,
+				CD46A26518AB3441001AB7B0 /* Noun.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		CDD0E64218A8304C00064B18 = {
 			isa = PBXGroup;
 			children = (
@@ -133,11 +163,14 @@
 		CDD0E65418A8304C00064B18 /* BadCertificates */ = {
 			isa = PBXGroup;
 			children = (
+				CD46A26918AB3446001AB7B0 /* Model */,
 				CDD0E68D18A83A3600064B18 /* Views */,
 				CDD0E68918A8386B00064B18 /* View Controllers */,
 				CDD0E68318A830D100064B18 /* Objects */,
 				CDD0E65D18A8304C00064B18 /* BCAppDelegate.h */,
 				CDD0E65E18A8304C00064B18 /* BCAppDelegate.m */,
+				CD5BDB5918AAE5C40012F6BA /* BCDatabaseManager.h */,
+				CD5BDB5A18AAE5C40012F6BA /* BCDatabaseManager.m */,
 				CDD0E66018A8304C00064B18 /* Main.storyboard */,
 				CDD0E65518A8304C00064B18 /* Supporting Files */,
 				CD2EBBAC18A85E5000F6CB27 /* Images.xcassets */,
@@ -154,7 +187,8 @@
 				CDD0E65C18A8304C00064B18 /* BadCertificates-Prefix.pch */,
 				CD2EBB9C18A8433A00F6CB27 /* styles.json */,
 				CD2EBBAE18A86B4B00F6CB27 /* feelings.plist */,
-				CD2EBBB018A8763500F6CB27 /* awards.plist */,
+				CD5BDB6618AB20100012F6BA /* adjectives.plist */,
+				CDD8AA8518AC17FA00E0B9C2 /* nouns.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -291,8 +325,9 @@
 				CD2EBBAD18A85E5000F6CB27 /* Images.xcassets in Resources */,
 				CDD0E66218A8304C00064B18 /* Main.storyboard in Resources */,
 				CD2EBB9D18A8433A00F6CB27 /* styles.json in Resources */,
-				CD2EBBB118A8763500F6CB27 /* awards.plist in Resources */,
+				CDD8AA8618AC17FA00E0B9C2 /* nouns.plist in Resources */,
 				CD2EBBAF18A86B4B00F6CB27 /* feelings.plist in Resources */,
+				CD5BDB6718AB20100012F6BA /* adjectives.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,9 +348,14 @@
 			files = (
 				CDD0E65B18A8304C00064B18 /* main.m in Sources */,
 				CDD0E68618A830E600064B18 /* BCCertificate.m in Sources */,
+				CD5BDB5B18AAE5C40012F6BA /* BCDatabaseManager.m in Sources */,
 				CD2EBBA018A8486400F6CB27 /* BCStyle.m in Sources */,
+				CD46A26618AB3441001AB7B0 /* Adjective.m in Sources */,
+				CD46A26718AB3441001AB7B0 /* Emotion.m in Sources */,
+				CD46A26818AB3441001AB7B0 /* Noun.m in Sources */,
 				CDD0E65F18A8304C00064B18 /* BCAppDelegate.m in Sources */,
 				CDD0E68C18A8389900064B18 /* BCStyleViewController.m in Sources */,
+				CD5BDB7218AB319E0012F6BA /* Model.xcdatamodeld in Sources */,
 				CD2EBBA918A851A400F6CB27 /* BCCertificateViewController.m in Sources */,
 				CD701A1318A9E3B000356353 /* BCHomeViewController.m in Sources */,
 				CDD0E69018A83A5400064B18 /* BCStyleCell.m in Sources */,
@@ -539,6 +579,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CD5BDB7018AB319E0012F6BA /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CD5BDB7118AB319E0012F6BA /* Model.xcdatamodel */,
+			);
+			currentVersion = CD5BDB7118AB319E0012F6BA /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CDD0E64318A8304C00064B18 /* Project object */;
 }
