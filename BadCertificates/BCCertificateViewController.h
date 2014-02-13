@@ -11,7 +11,7 @@
 #import "BCCertificate.h"
 #import "BCStyleViewController.h"
 
-@interface BCCertificateViewController : UIViewController <UIActionSheetDelegate, BCStyleDelegate>
+@interface BCCertificateViewController : UIViewController <UIActionSheetDelegate, BCStyleDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) BCStyle *style;
 @property (nonatomic, strong) BCCertificate *certificate;

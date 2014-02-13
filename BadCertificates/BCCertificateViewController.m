@@ -28,10 +28,10 @@
     _dateFormatter.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
     
     // setup the style of the certificate
-    [self setupCertificateAppearance];
+    [self updateCertificateAppearance];
     
     // setup the proper values for the randomly selected certificate
-    [self setupCertificateValues];
+    [self updateCertificateValues];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -67,7 +67,7 @@
 
 #pragma mark - Helpers
 
-- (void)setupCertificateAppearance
+- (void)updateCertificateAppearance
 {
     // certificate background
     self.certificateBackground.image = [UIImage imageNamed:self.style.backgroundImageName];
@@ -85,10 +85,10 @@
     
 }
 
-- (void)setupCertificateValues
+- (void)updateCertificateValues
 {
     self.headerLabel.text = [NSString stringWithFormat:@"With great %@, %@ presents the title of", self.certificate.feeling,self.certificate.awarder];
-    self.awardLabel.text = [NSString stringWithFormat:@"%@ %@", self.certificate.adjective, self.certificate.noun];
+    self.awardLabel.text = [NSString stringWithFormat:@"%@%@%@", self.certificate.adjective, self.certificate.noun.length > 0 ? @" " : @"", self.certificate.noun];
     self.awarderLabel.text = self.certificate.awarder;
     self.recipientLabel.text = self.certificate.awardee;
     _dateFormatter.dateFormat = [NSString stringWithFormat:@"d'%@ %@' MMMM, YYYY", [self suffixForDayInDate:self.certificate.date], @"of"];
@@ -103,7 +103,7 @@
     newCert.awarder = self.certificate.awarder;
     newCert.awardee = self.certificate.awardee;
     self.certificate = newCert;
-    [self setupCertificateValues];
+    [self updateCertificateValues];
 }
 
 - (IBAction)pressedRandom:(id)sender
@@ -113,7 +113,7 @@
 
 - (IBAction)pressedEdit:(id)sender
 {
-    UIActionSheet *as = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Random", @"Custom", nil];
+    UIActionSheet *as = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Emotion",@"Award",@"Awarder",@"Awardee",@"Signature", nil];
     [as showInView:self.view];
 }
 
@@ -134,7 +134,7 @@
 - (void)dismissedWithStyle:(BCStyle *)style
 {
     self.style = style;
-    [self setupCertificateAppearance];
+    [self updateCertificateAppearance];
 }
 
 #pragma mark - Action sheet delegate
@@ -143,10 +143,64 @@
 {
     switch (buttonIndex) {
         case 0:
-            [self randomCertificate];
+            [self showAlertWithTitle:@"Emotion" text:self.certificate.feeling tag:0];
             break;
         case 1:
-            DLog(@"pressed edit");
+            [self showAlertWithTitle:@"Award" text:self.awardLabel.text tag:1];
+            break;
+        case 2:
+            [self showAlertWithTitle:@"Awarder" text:self.certificate.awarder tag:2];
+            break;
+        case 3:
+            [self showAlertWithTitle:@"Awardee" text:self.certificate.awardee tag:3];
+            break;
+        case 4:
+            DLog(@"No support yet");
+            break;
+        default:
+        break;
+    }
+}
+
+- (void)showAlertWithTitle:(NSString *)title text:(NSString *)text tag:(NSUInteger)tag
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    alert.tag = tag;
+    [[alert textFieldAtIndex:0] setText:text];
+    [alert show];
+}
+
+#pragma mark - Alert view delegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *text = [[alertView textFieldAtIndex:0] text];
+    switch (alertView.tag) {
+        case 0:
+            if (buttonIndex == 1) {
+                self.certificate.feeling = text;
+                [self updateCertificateValues];
+            }
+            break;
+        case 1:
+            if (buttonIndex == 1) {
+                self.certificate.noun = @"";
+                self.certificate.adjective = text;
+                [self updateCertificateValues];
+            }
+            break;
+        case 2:
+            if (buttonIndex == 1) {
+                self.certificate.awarder = text;
+                [self updateCertificateValues];
+            }
+            break;
+        case 3:
+            if (buttonIndex == 1) {
+                self.certificate.awardee = text;
+                [self updateCertificateValues];
+            }
             break;
         default:
             break;
