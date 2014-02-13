@@ -10,7 +10,9 @@
 #import "BCCertificate.h"
 #import "BCCertificateViewController.h"
 
-@interface BCHomeViewController ()
+@interface BCHomeViewController () {
+    CGFloat _oldConstant;
+}
 
 @end
 
@@ -19,12 +21,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardUp:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDown:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:animated];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - Helpers
@@ -92,6 +102,37 @@
         [self pressedGo:nil];
     }
     return NO;
+}
+
+#pragma mark - Keyboard notifications
+
+- (void)keyboardUp:(NSNotification *)note
+{
+    _oldConstant = self.containerBottomConstraint.constant;
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:[note.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue]];
+    [UIView setAnimationCurve:[note.userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue]];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    
+    self.containerBottomConstraint.constant = 110;
+    [self.view layoutIfNeeded];
+    
+    [UIView commitAnimations];
+    
+}
+
+- (void)keyboardDown:(NSNotification *)note
+{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:[note.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue]];
+    [UIView setAnimationCurve:[note.userInfo[UIKeyboardAnimationCurveUserInfoKey] integerValue]];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    
+    self.containerBottomConstraint.constant = _oldConstant;
+    [self.view layoutIfNeeded];
+    
+    [UIView commitAnimations];
 }
 
 @end

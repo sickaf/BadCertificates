@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *awarderTextField;
 @property (weak, nonatomic) IBOutlet UIButton *goButton;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *containerBottomConstraint;
+
 - (IBAction)pressedGo:(id)sender;
 - (IBAction)pressedDismissButton:(id)sender;
 
