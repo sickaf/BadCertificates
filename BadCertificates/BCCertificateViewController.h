@@ -28,5 +28,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *awardLabel;
 @property (weak, nonatomic) IBOutlet UILabel *recipientLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *signatureImageView;
+@property (weak, nonatomic) IBOutlet UIView *certificateView;
 
 @end

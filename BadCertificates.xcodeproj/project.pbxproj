@@ -38,6 +38,8 @@
 		CDD8AA8918AC502600E0B9C2 /* BCPaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD8AA8818AC502600E0B9C2 /* BCPaintView.m */; };
 		CDD8AA8D18AC50F800E0B9C2 /* BCAnnotationData.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD8AA8C18AC50F800E0B9C2 /* BCAnnotationData.m */; };
 		CDD8AA9018AC517A00E0B9C2 /* BCSignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD8AA8F18AC517A00E0B9C2 /* BCSignatureViewController.m */; };
+		CDD8AA9418AC66C400E0B9C2 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD8AA9318AC66C400E0B9C2 /* SVProgressHUD.m */; };
+		CDD8AA9618AC66CD00E0B9C2 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDD8AA9518AC66CD00E0B9C2 /* SVProgressHUD.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,9 @@
 		CDD8AA8C18AC50F800E0B9C2 /* BCAnnotationData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCAnnotationData.m; sourceTree = "<group>"; };
 		CDD8AA8E18AC517A00E0B9C2 /* BCSignatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSignatureViewController.h; sourceTree = "<group>"; };
 		CDD8AA8F18AC517A00E0B9C2 /* BCSignatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSignatureViewController.m; sourceTree = "<group>"; };
+		CDD8AA9218AC66C400E0B9C2 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = Frameworks/SVProgressHUD/SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
+		CDD8AA9318AC66C400E0B9C2 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SVProgressHUD.m; path = Frameworks/SVProgressHUD/SVProgressHUD/SVProgressHUD.m; sourceTree = "<group>"; };
+		CDD8AA9518AC66CD00E0B9C2 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SVProgressHUD.bundle; path = Frameworks/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +166,7 @@
 		CDD0E64D18A8304C00064B18 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDD8AA9118AC66A600E0B9C2 /* SVProgressHUD */,
 				CDD0E64E18A8304C00064B18 /* Foundation.framework */,
 				CDD0E65018A8304C00064B18 /* CoreGraphics.framework */,
 				CDD0E65218A8304C00064B18 /* UIKit.framework */,
@@ -259,6 +265,16 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		CDD8AA9118AC66A600E0B9C2 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				CDD8AA9518AC66CD00E0B9C2 /* SVProgressHUD.bundle */,
+				CDD8AA9218AC66C400E0B9C2 /* SVProgressHUD.h */,
+				CDD8AA9318AC66C400E0B9C2 /* SVProgressHUD.m */,
+			);
+			name = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,6 +355,7 @@
 				CDD0E65918A8304C00064B18 /* InfoPlist.strings in Resources */,
 				CD2EBBAD18A85E5000F6CB27 /* Images.xcassets in Resources */,
 				CDD0E66218A8304C00064B18 /* Main.storyboard in Resources */,
+				CDD8AA9618AC66CD00E0B9C2 /* SVProgressHUD.bundle in Resources */,
 				CD2EBB9D18A8433A00F6CB27 /* styles.json in Resources */,
 				CDD8AA8618AC17FA00E0B9C2 /* nouns.plist in Resources */,
 				CD2EBBAF18A86B4B00F6CB27 /* feelings.plist in Resources */,
@@ -366,6 +383,7 @@
 				CDD8AA9018AC517A00E0B9C2 /* BCSignatureViewController.m in Sources */,
 				CD5BDB5B18AAE5C40012F6BA /* BCDatabaseManager.m in Sources */,
 				CD2EBBA018A8486400F6CB27 /* BCStyle.m in Sources */,
+				CDD8AA9418AC66C400E0B9C2 /* SVProgressHUD.m in Sources */,
 				CD46A26618AB3441001AB7B0 /* Adjective.m in Sources */,
 				CD46A26718AB3441001AB7B0 /* Emotion.m in Sources */,
 				CD46A26818AB3441001AB7B0 /* Noun.m in Sources */,

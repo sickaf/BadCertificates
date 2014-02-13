@@ -7,6 +7,8 @@
 //
 
 #import "BCCertificateViewController.h"
+#import "SVProgressHUD.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface BCCertificateViewController () {
     BOOL _shouldStatusBarHide;
@@ -31,6 +33,10 @@
     
     // setup the proper values for the randomly selected certificate
     [self updateCertificateValues];
+    
+    // setup tap gesture
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    [self.certificateView addGestureRecognizer:tap];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -96,6 +102,11 @@
 
 #pragma mark - Actions
 
+- (void)handleTap:(id)sender
+{
+    [self pressedEdit:nil];
+}
+
 - (void)randomCertificate
 {
     BCCertificate *newCert = [BCCertificate randomCertificate];
@@ -126,6 +137,33 @@
 
 - (IBAction)pressedShare:(id)sender
 {
+    UIGraphicsBeginImageContextWithOptions(self.certificateView.frame.size, YES, 0.0);
+	[self.certificateView drawViewHierarchyInRect:CGRectMake(0, 0, CGRectGetWidth(self.certificateView.frame), CGRectGetHeight(self.certificateView.frame)) afterScreenUpdates:NO];
+    UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+    
+    ALAssetsLibrary *library = [[ALAssetsLibrary alloc] init];
+    
+    [SVProgressHUD showWithStatus:@"Saving..."];
+    [library writeImageToSavedPhotosAlbum:screenshot.CGImage
+                              orientation:(ALAssetOrientation)[screenshot imageOrientation]
+                          completionBlock:^(NSURL *assetURL, NSError *error) {
+                              
+                              dispatch_async(dispatch_get_main_queue(), ^{
+                                  if (!error) {
+                                      [SVProgressHUD showSuccessWithStatus:@"Saved!"];
+                                  }
+                                  else {
+                                      [SVProgressHUD dismiss];
+                                      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil)
+                                                                                      message:NSLocalizedString(@"There was an error saving photo to library. Try again later.", nil)
+                                                                                     delegate:nil
+                                                                            cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                                                                            otherButtonTitles:nil];
+                                      [alert show];
+                                  }
+                              });
+                          }];
 }
 
 #pragma mark - Style delegate

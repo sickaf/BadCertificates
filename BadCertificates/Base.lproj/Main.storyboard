@@ -273,7 +273,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hTc-Rj-wfl">
-                                        <rect key="frame" x="294" y="214" width="110" height="34"/>
+                                        <rect key="frame" x="294" y="217" width="110" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -318,9 +318,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEc-ym-wbs">
-                                <rect key="frame" x="499" y="245" width="40" height="30"/>
+                                <rect key="frame" x="502" y="245" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Share">
+                                <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -340,6 +340,7 @@
                         <outlet property="awardLabel" destination="NWs-Bp-rMn" id="8Zp-Oo-sai"/>
                         <outlet property="awarderLabel" destination="tzl-SM-5Nh" id="6N7-Py-VCq"/>
                         <outlet property="certificateBackground" destination="kPb-5c-05N" id="FuB-0H-eT4"/>
+                        <outlet property="certificateView" destination="4ZF-gq-jIl" id="9DT-b4-LLV"/>
                         <outlet property="dateLabel" destination="sy3-Zg-vUU" id="di7-p3-OvP"/>
                         <outlet property="functionalityLabel" destination="C9F-Yh-3tU" id="XcP-IY-HsZ"/>
                         <outlet property="headerLabel" destination="kdU-3C-eCW" id="sAJ-0k-uk8"/>

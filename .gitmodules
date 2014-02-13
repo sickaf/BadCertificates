@@ -1,0 +1,3 @@
+[submodule "Frameworks/SVProgressHUD"]
+	path = Frameworks/SVProgressHUD
+	url = https://github.com/samvermette/SVProgressHUD.git
