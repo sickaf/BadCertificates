@@ -212,8 +212,8 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="awardeeTextField" destination="WCZ-8n-BWX" id="dku-nm-tQT"/>
-                        <outlet property="awarderTextField" destination="6g0-AM-oIs" id="uip-TK-C6m"/>
+                        <outlet property="awardeeTextField" destination="6g0-AM-oIs" id="NUc-Xz-RlT"/>
+                        <outlet property="awarderTextField" destination="WCZ-8n-BWX" id="SL1-BR-wVH"/>
                         <outlet property="containerBottomConstraint" destination="l5t-SF-RND" id="cXO-eU-NxH"/>
                         <outlet property="goButton" destination="O2V-nc-2Xg" id="K38-pP-KDO"/>
                     </connections>
