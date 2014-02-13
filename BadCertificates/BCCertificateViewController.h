@@ -10,8 +10,9 @@
 #import "BCStyle.h"
 #import "BCCertificate.h"
 #import "BCStyleViewController.h"
+#import "BCSignatureViewController.h"
 
-@interface BCCertificateViewController : UIViewController <UIActionSheetDelegate, BCStyleDelegate, UIAlertViewDelegate>
+@interface BCCertificateViewController : UIViewController <UIActionSheetDelegate, BCStyleDelegate, UIAlertViewDelegate, BCSignatureDelegate>
 
 @property (nonatomic, strong) BCStyle *style;
 @property (nonatomic, strong) BCCertificate *certificate;
@@ -26,5 +27,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *awardLabel;
 @property (weak, nonatomic) IBOutlet UILabel *recipientLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *signatureImageView;
 
 @end

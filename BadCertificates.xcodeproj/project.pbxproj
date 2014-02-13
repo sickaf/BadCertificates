@@ -35,6 +35,9 @@
 		CDD0E68C18A8389900064B18 /* BCStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD0E68B18A8389900064B18 /* BCStyleViewController.m */; };
 		CDD0E69018A83A5400064B18 /* BCStyleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD0E68F18A83A5400064B18 /* BCStyleCell.m */; };
 		CDD8AA8618AC17FA00E0B9C2 /* nouns.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDD8AA8518AC17FA00E0B9C2 /* nouns.plist */; };
+		CDD8AA8918AC502600E0B9C2 /* BCPaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD8AA8818AC502600E0B9C2 /* BCPaintView.m */; };
+		CDD8AA8D18AC50F800E0B9C2 /* BCAnnotationData.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD8AA8C18AC50F800E0B9C2 /* BCAnnotationData.m */; };
+		CDD8AA9018AC517A00E0B9C2 /* BCSignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD8AA8F18AC517A00E0B9C2 /* BCSignatureViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +93,12 @@
 		CDD0E68E18A83A5400064B18 /* BCStyleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCStyleCell.h; sourceTree = "<group>"; };
 		CDD0E68F18A83A5400064B18 /* BCStyleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCStyleCell.m; sourceTree = "<group>"; };
 		CDD8AA8518AC17FA00E0B9C2 /* nouns.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = nouns.plist; sourceTree = "<group>"; };
+		CDD8AA8718AC502600E0B9C2 /* BCPaintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPaintView.h; sourceTree = "<group>"; };
+		CDD8AA8818AC502600E0B9C2 /* BCPaintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPaintView.m; sourceTree = "<group>"; };
+		CDD8AA8B18AC50F800E0B9C2 /* BCAnnotationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCAnnotationData.h; sourceTree = "<group>"; };
+		CDD8AA8C18AC50F800E0B9C2 /* BCAnnotationData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCAnnotationData.m; sourceTree = "<group>"; };
+		CDD8AA8E18AC517A00E0B9C2 /* BCSignatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSignatureViewController.h; sourceTree = "<group>"; };
+		CDD8AA8F18AC517A00E0B9C2 /* BCSignatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSignatureViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +240,8 @@
 				CD2EBBA818A851A400F6CB27 /* BCCertificateViewController.m */,
 				CD701A1118A9E3B000356353 /* BCHomeViewController.h */,
 				CD701A1218A9E3B000356353 /* BCHomeViewController.m */,
+				CDD8AA8E18AC517A00E0B9C2 /* BCSignatureViewController.h */,
+				CDD8AA8F18AC517A00E0B9C2 /* BCSignatureViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -240,6 +251,10 @@
 			children = (
 				CDD0E68E18A83A5400064B18 /* BCStyleCell.h */,
 				CDD0E68F18A83A5400064B18 /* BCStyleCell.m */,
+				CDD8AA8718AC502600E0B9C2 /* BCPaintView.h */,
+				CDD8AA8818AC502600E0B9C2 /* BCPaintView.m */,
+				CDD8AA8B18AC50F800E0B9C2 /* BCAnnotationData.h */,
+				CDD8AA8C18AC50F800E0B9C2 /* BCAnnotationData.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -348,14 +363,17 @@
 			files = (
 				CDD0E65B18A8304C00064B18 /* main.m in Sources */,
 				CDD0E68618A830E600064B18 /* BCCertificate.m in Sources */,
+				CDD8AA9018AC517A00E0B9C2 /* BCSignatureViewController.m in Sources */,
 				CD5BDB5B18AAE5C40012F6BA /* BCDatabaseManager.m in Sources */,
 				CD2EBBA018A8486400F6CB27 /* BCStyle.m in Sources */,
 				CD46A26618AB3441001AB7B0 /* Adjective.m in Sources */,
 				CD46A26718AB3441001AB7B0 /* Emotion.m in Sources */,
 				CD46A26818AB3441001AB7B0 /* Noun.m in Sources */,
 				CDD0E65F18A8304C00064B18 /* BCAppDelegate.m in Sources */,
+				CDD8AA8918AC502600E0B9C2 /* BCPaintView.m in Sources */,
 				CDD0E68C18A8389900064B18 /* BCStyleViewController.m in Sources */,
 				CD5BDB7218AB319E0012F6BA /* Model.xcdatamodeld in Sources */,
+				CDD8AA8D18AC50F800E0B9C2 /* BCAnnotationData.m in Sources */,
 				CD2EBBA918A851A400F6CB27 /* BCCertificateViewController.m in Sources */,
 				CD701A1318A9E3B000356353 /* BCHomeViewController.m in Sources */,
 				CDD0E69018A83A5400064B18 /* BCStyleCell.m in Sources */,

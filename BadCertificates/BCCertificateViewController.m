@@ -7,7 +7,6 @@
 //
 
 #import "BCCertificateViewController.h"
-#import "BCStyleViewController.h"
 
 @interface BCCertificateViewController () {
     BOOL _shouldStatusBarHide;
@@ -137,6 +136,13 @@
     [self updateCertificateAppearance];
 }
 
+#pragma mark - Signature Delegate
+
+- (void)finishedWithSignature:(UIImage *)signature
+{
+    self.signatureImageView.image = signature;
+}
+
 #pragma mark - Action sheet delegate
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -155,11 +161,19 @@
             [self showAlertWithTitle:@"Awardee" text:self.certificate.awardee tag:3];
             break;
         case 4:
-            DLog(@"No support yet");
+            [self showPaintViewController];
             break;
         default:
         break;
     }
+}
+
+- (void)showPaintViewController
+{
+    BCSignatureViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"Paint"];
+    vc.delegate = self;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)showAlertWithTitle:(NSString *)title text:(NSString *)text tag:(NSUInteger)tag

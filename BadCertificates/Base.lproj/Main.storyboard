@@ -78,6 +78,48 @@
             </objects>
             <point key="canvasLocation" x="1391" y="130"/>
         </scene>
+        <!--Signature View Controller-->
+        <scene sceneID="Cld-8Y-l5i">
+            <objects>
+                <viewController storyboardIdentifier="Paint" id="s2V-Y6-dOk" customClass="BCSignatureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EXO-GB-DWK"/>
+                        <viewControllerLayoutGuide type="bottom" id="rNz-dh-tcJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QYk-Og-43K">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ses-hn-aqc">
+                                <rect key="frame" x="144" y="89" width="280" height="89"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="roX-V5-uwi" customClass="BCPaintView">
+                                <rect key="frame" x="144" y="89" width="280" height="89"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Draw your signature above" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpE-dq-yjH">
+                                <rect key="frame" x="135" y="209" width="299" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="paintView" destination="roX-V5-uwi" id="btk-SK-vNm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZH2-yh-wJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1391" y="583"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="YVj-mG-O9C">
             <objects>
@@ -220,16 +262,20 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OVs-yk-dfY">
-                                        <rect key="frame" x="295" y="243" width="110" height="2"/>
+                                        <rect key="frame" x="294" y="251" width="110" height="2"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Barack Obama" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzl-SM-5Nh">
-                                        <rect key="frame" x="295" y="243" width="110" height="21"/>
+                                        <rect key="frame" x="294" y="251" width="110" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hTc-Rj-wfl">
+                                        <rect key="frame" x="294" y="214" width="110" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
@@ -299,6 +345,7 @@
                         <outlet property="headerLabel" destination="kdU-3C-eCW" id="sAJ-0k-uk8"/>
                         <outlet property="hereOnThisLabel" destination="JWd-zM-5Y5" id="GT8-da-mc3"/>
                         <outlet property="recipientLabel" destination="PPS-kO-l1h" id="BLO-pu-m7b"/>
+                        <outlet property="signatureImageView" destination="hTc-Rj-wfl" id="mWW-pC-Dl9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WcL-V8-CuP" userLabel="First Responder" sceneMemberID="firstResponder"/>
