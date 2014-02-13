@@ -5,6 +5,24 @@
                "background_image": "background_one",
                "award_font": "Baskerville-BoldItalic",
                "detail_font": "HelveticaNeue-Medium"
+               },
+               {
+               "style_number": 2,
+               "background_image": "background_one",
+               "award_font": "SnellRoundhand-Black",
+               "detail_font": "HelveticaNeue-Medium"
+               },
+               {
+               "style_number": 3,
+               "background_image": "background_two",
+               "award_font": "Baskerville-BoldItalic",
+               "detail_font": "HelveticaNeue-Medium"
+               },
+               {
+               "style_number": 4,
+               "background_image": "background_two",
+               "award_font": "SnellRoundhand-Black",
+               "detail_font": "HelveticaNeue-Medium"
                }
                ]
 }

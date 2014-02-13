@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "BCStyle.h"
 #import "BCCertificate.h"
+#import "BCStyleViewController.h"
 
-@interface BCCertificateViewController : UIViewController
+@interface BCCertificateViewController : UIViewController <UIActionSheetDelegate, BCStyleDelegate>
 
 @property (nonatomic, strong) BCStyle *style;
 @property (nonatomic, strong) BCCertificate *certificate;

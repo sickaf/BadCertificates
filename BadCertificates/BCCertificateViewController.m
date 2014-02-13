@@ -7,9 +7,11 @@
 //
 
 #import "BCCertificateViewController.h"
+#import "BCStyleViewController.h"
 
 @interface BCCertificateViewController () {
     BOOL _shouldStatusBarHide;
+    NSDateFormatter *_dateFormatter;
 }
 
 @end
@@ -20,10 +22,10 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain target:self action:@selector(editPressed:)];
-    
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
-    [self.view addGestureRecognizer:tap];
+    // setup date formatter
+    _dateFormatter = [[NSDateFormatter alloc] init];
+    _dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+    _dateFormatter.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
     
     // setup the style of the certificate
     [self setupCertificateAppearance];
@@ -42,11 +44,25 @@
     [UIView animateWithDuration:0.2 animations:^{
         [self setNeedsStatusBarAppearanceUpdate];
     }];
+    
+    [self becomeFirstResponder];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [self resignFirstResponder];
 }
 
 - (BOOL)prefersStatusBarHidden
 {
     return _shouldStatusBarHide;
+}
+
+-(BOOL)canBecomeFirstResponder
+{
+    return YES;
 }
 
 #pragma mark - Helpers
@@ -71,23 +87,97 @@
 
 - (void)setupCertificateValues
 {
-    self.headerLabel.text = [NSString stringWithFormat:@"With great %@, we present the title of", self.certificate.feeling];
+    self.headerLabel.text = [NSString stringWithFormat:@"With great %@, %@ presents the title of", self.certificate.feeling,self.certificate.awarder];
     self.awardLabel.text = [NSString stringWithFormat:@"%@ %@", self.certificate.adjective, self.certificate.noun];
     self.awarderLabel.text = self.certificate.awarder;
     self.recipientLabel.text = self.certificate.awardee;
+    _dateFormatter.dateFormat = [NSString stringWithFormat:@"d'%@ %@' MMMM, YYYY", [self suffixForDayInDate:self.certificate.date], @"of"];
+    self.dateLabel.text = [_dateFormatter stringFromDate:self.certificate.date];
 }
 
 #pragma mark - Actions
 
-- (void)handleTap:(UITapGestureRecognizer *)tap
+- (void)randomCertificate
 {
-    _shouldStatusBarHide = !_shouldStatusBarHide;
-    [self.navigationController setNavigationBarHidden:!self.navigationController.navigationBarHidden animated:NO];
+    BCCertificate *newCert = [BCCertificate randomCertificate];
+    newCert.awarder = self.certificate.awarder;
+    newCert.awardee = self.certificate.awardee;
+    self.certificate = newCert;
+    [self setupCertificateValues];
 }
 
-- (void)editPressed:(id)sender
+- (IBAction)pressedRandom:(id)sender
 {
-    
+    [self randomCertificate];
+}
+
+- (IBAction)pressedEdit:(id)sender
+{
+    UIActionSheet *as = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Random", @"Custom", nil];
+    [as showInView:self.view];
+}
+
+- (IBAction)pressedStyle:(id)sender
+{
+    BCStyleViewController *style = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"Styles"];
+    style.delegate = self;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:style];
+    [self presentViewController:nav animated:YES completion:nil];
+}
+
+- (IBAction)pressedShare:(id)sender
+{
+}
+
+#pragma mark - Style delegate
+
+- (void)dismissedWithStyle:(BCStyle *)style
+{
+    self.style = style;
+    [self setupCertificateAppearance];
+}
+
+#pragma mark - Action sheet delegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0:
+            [self randomCertificate];
+            break;
+        case 1:
+            DLog(@"pressed edit");
+            break;
+        default:
+            break;
+    }
+}
+
+#pragma mark - Utilities
+
+- (NSString *)suffixForDayInDate:(NSDate *)date{
+    NSInteger day = [[[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] components:NSDayCalendarUnit fromDate:date] day];
+    if (day >= 11 && day <= 13) {
+        return @"th";
+    } else if (day % 10 == 1) {
+        return @"st";
+    } else if (day % 10 == 2) {
+        return @"nd";
+    } else if (day % 10 == 3) {
+        return @"rd";
+    } else {
+        return @"th";
+    }
+}
+
+#pragma mark - Motion
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake)
+    {
+        [self randomCertificate];
+    }
 }
 
 @end

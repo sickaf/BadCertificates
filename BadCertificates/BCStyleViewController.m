@@ -24,6 +24,12 @@
 {
     [super viewDidLoad];
     
+    // always bounce the collection view
+    [self.collectionView setAlwaysBounceVertical:YES];
+    
+    // setup right bar button
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(pressedDone:)];
+    
     // fetch style data
     [self fetchData];
 }
@@ -81,13 +87,10 @@
     // get the proper style
     BCStyle *style = [self.styles objectAtIndex:indexPath.row];
     
-    // generate a ranomd certificate
-    BCCertificate *cert = [BCCertificate randomCertificate];
-    
-    BCCertificateViewController *cvc = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"certificate"];
-    cvc.style = style;
-    cvc.certificate = cert;
-    [self.navigationController pushViewController:cvc animated:YES];
+    if ([self.delegate respondsToSelector:@selector(dismissedWithStyle:)]) {
+        [self.delegate dismissedWithStyle:style];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 #pragma mark - Getters
@@ -99,6 +102,13 @@
 	}
 	
 	return _styles;
+}
+
+#pragma mark - Actions
+
+- (void)pressedDone:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BCStyle.h"
+
+@protocol BCStyleDelegate;
 
 @interface BCStyleViewController : UICollectionViewController
+
+@property (nonatomic, assign) id<BCStyleDelegate> delegate;
+
+@end
+
+@protocol BCStyleDelegate <NSObject>
+
+- (void)dismissedWithStyle:(BCStyle *)style;
 
 @end
