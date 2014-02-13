@@ -323,6 +323,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Cody Kolodziejzyk";
 				TargetAttributes = {
+					CDD0E64A18A8304C00064B18 = {
+						DevelopmentTeam = J8596L77KB;
+					};
 					CDD0E66B18A8304C00064B18 = {
 						TestTargetID = CDD0E64A18A8304C00064B18;
 					};
@@ -521,10 +524,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BadCertificates/BadCertificates-Prefix.pch";
 				INFOPLIST_FILE = "BadCertificates/BadCertificates-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "54E1B637-649C-4600-82A0-051B19E49137";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -534,10 +539,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BadCertificates/BadCertificates-Prefix.pch";
 				INFOPLIST_FILE = "BadCertificates/BadCertificates-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "54E1B637-649C-4600-82A0-051B19E49137";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
